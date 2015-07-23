@@ -140,7 +140,8 @@ for _subnet in ${localnet}; do
     add_to_file "${nodefile}" "Subnet = ${_subnet}"
 done
 
-mode="router"
+# El modo por defecto es switch
+mode="switch"
 $verbose && msg "Este nodo es un %s" "*${mode}*"
 
 $verbose && msg "Generando %s..." "*${conffile}*"
